@@ -1,0 +1,36 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "productName": "hayet",
+      "description": "eau minirale naturelle",
+      "price": 1000,
+      "quantity": 14,
+      "expiryDate": "2020-09-17"
+    },
+    {
+      "id": 2,
+      "productName": "hayet",
+      "description": "eau minirale naturelle",
+      "price": 1000,
+      "quantity": 14,
+      "expiryDate": "2020-09-17"
+    },
+    {
+      "id": 3,
+      "productName": "sabra",
+      "description": "eau minirale naturelle",
+      "price": 1000,
+      "quantity": 14,
+      "expiryDate": "2020-09-17"
+    },
+    {
+      "id": 1704587007848,
+      "productName": "aaa",
+      "description": "aaaa",
+      "price": "12",
+      "quantity": "1425",
+      "expiryDate": "2024-01-19"
+    }
+  ]
+}

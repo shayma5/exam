@@ -1,0 +1,36 @@
+<h2 style="padding-left: 40%;">Add New User</h2>
+<!--<button (click)="add()">Add</button>-->
+<div class="container" style="width: 700px;">
+    <form #addForm="ngForm" (ngSubmit)="add(addForm)">
+        <div class="form-group">
+            <label>product Name</label>
+            <input required minlength="3" pattern="[a-zA-Z]*" #inputproductName="ngModel" id="inputproductName" type="text" class="form-control" placeholder="Enter product Name" ngModel  name="inputproductName">
+            <small class="text text-danger" *ngIf="inputproductName?.errors?.['required'] && inputproductName.touched">Name is required</small>
+            <small class="text text-danger" *ngIf="inputproductName?.errors?.['minlength'] && inputproductName.touched">min length est 3</small>
+            <small class="text text-danger" *ngIf="inputproductName?.errors?.['pattern'] && inputproductName.touched">name should be letters only</small>
+        </div>
+
+        <div class="form-group">
+            <label>description</label>
+            <input type="text" class="form-control" placeholder="Enter description" ngModel  name="inputdescription">
+        </div>
+
+        <div class="form-group">
+            <label>price</label>
+            <input type="text" class="form-control" placeholder="Enter price" name="inputprice" ngModel >
+        </div>
+
+        <div class="form-group">
+            <label>quantity</label>
+            <input type="text" class="form-control" placeholder="Enter quantity" ngModel  name="inputquantity">
+        </div>
+
+        <div class="form-group">
+            <label>expiryDate</label>
+            <input type="date" class="form-control" placeholder="Enter expiry Date" ngModel  name="inputexpiryDate">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+
+</div>

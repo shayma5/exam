@@ -1,0 +1,62 @@
+<br>
+<br>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+<div class="row">
+	<div class="col-lg-12">
+		<div class="main-box clearfix">
+			<div class="table-responsive">
+				<table class="table user-list">
+					<thead>
+						<tr>
+							<th class="text-center"><span>Product Name</span></th>
+							<th class="text-center"><span>Description</span></th>
+							<th class="text-center"><span>Price</span></th>
+							<th class="text-center"><span>Quantity</span></th>
+							<th class="text-center"><span>ExpiryDate</span></th>
+							<th class="text-center">Actions</th>
+						</tr>
+					</thead>
+					<tbody *ngFor="let item of list">
+						<tr >
+                            <td class="text-center">
+								{{item.productName}}
+							</td>
+                            <td class="text-center">
+								{{item.description}}
+							</td>
+							<td class="text-center">
+								{{item.price}}
+							</td>
+							<td class="text-center">
+								{{item.quantity}}
+							</td>
+							<td class="text-center">
+								{{item.expiryDate}}
+							</td>
+							<td class="text-center">
+								<div >
+									<button type="button" value="Delete" class="btn btn-danger" (click)="deleteProduct(item.id)">Delete</button>
+									<button type="button" value="edit" class="btn btn-success" [routerLink]="['update',item.id]">Edit</button>
+									<button type="button" value="details" class="btn btn-info" [routerLink]="['details',item.id]">Detail</button>
+								</div>
+							</td>
+						</tr>
+                    </tbody>
+				</table>
+			</div>
+			<ul class="pagination pull-right">
+				<li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+			</ul>
+		</div>
+		<button type="button" routerLink="addproduct" class="btn btn-secondary">add new</button>
+		<!--<button (click)="add()">add new user2</button>-->
+	</div>
+</div>
+</div>
